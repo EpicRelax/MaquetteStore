@@ -1,0 +1,464 @@
+@font-face {
+    font-family: "montbold";
+    src: url(../font/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: "montreg";
+    src: url(../font/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "montreg";
+}
+
+/* nav logo */
+
+#logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    background-color: black;
+    font-size: 1.7rem;
+}
+
+#menu {
+    position: absolute;
+    top: 0;
+    margin-top: 4rem;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#menu ul {
+    list-style-type: none;
+}
+
+#menu a {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0%;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+#menu a, #menuToggle{
+    overflow: hidden;
+}
+
+#menuToggle ~ #menu ul a {
+    height: 4rem;
+    padding: .5rem 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.4s;
+}
+
+#menuToggle:checked ~ #menu ul a {
+    width: 100%;
+    transition: width 0.4s;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.menuButtonContainer {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuButton, .menuButton::before, .menuButton::after {
+    display: block;
+    position: absolute;
+}
+
+
+#logo, #burger {
+    color: white;
+}
+
+
+/* nav search */
+
+#search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    font-size: 1.3rem;
+    color: dimgray;
+}
+
+#search div {
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+}
+
+#search button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    color: dimgray;
+}
+
+#search input {
+    display: none;
+}
+
+/* section collection */
+
+#collection div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 95%;
+    height: 30vh;
+    margin: 1rem auto;
+    background-image: url(../img/jeans.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+#collection h3, #collection p, #collection button {
+    margin: 0 1.5rem;
+
+}
+
+#collection h3 {
+    font-size: 2.1rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.8rem;
+}
+
+#collection p {
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+
+#collection button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/* section articles */
+
+#numbItems {
+    margin-left: 0.6rem;
+    color: lightgray;
+}
+
+#forWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: 45%;
+    margin: 0.2rem auto;
+    font-size: 1.2rem;
+    color: dimgrey;
+    font-weight: 500;
+}
+
+.cards img {
+    width: 100%;
+}
+
+.cards p:last-of-type {
+    color: black;
+}
+
+.ns {
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 1.3rem;
+    padding: 0.2rem;
+    font-weight: 200;
+    left: 0;
+}
+
+.red {
+    color: red;
+    font-weight: 200;
+}
+
+/* section subscribe */
+
+#subscribe {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 1rem auto 0 auto;
+    background-color: black;
+    color: white;
+    font-weight: 100;
+}
+
+#subscribe div {
+    margin: 0 1rem;
+    padding: 1.5rem 0;
+}
+
+#subscribe div h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    margin: 1.2rem 0;
+}
+
+#subscribe div p {
+    font-size: 1.1rem;
+}
+
+#subscribe div form {
+    margin: 1rem 0;
+}
+
+#subscribe form input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    margin: 0.3rem 0;
+}
+
+#subscribe form input:last-child {
+    color: white;
+    background-color: red;
+    width: 35%;
+    font-size: 1.1rem;
+}
+/* 
+section contact */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: lightgray;
+    width: 95%;
+    margin: auto;
+    padding: 5rem 0;
+    color: dimgrey;
+}
+
+#contact div form {
+    margin: 1rem 1rem 3rem 1rem;
+}
+
+#contact form input {
+    width: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    margin: 0.3rem 0;
+}
+
+#contact form input:last-child {
+    color: white;
+    background-color: black;
+    font-size: 1.2rem;
+}
+
+/* section infos Contact */
+
+#infosContact {
+    display: flex;
+    justify-content: space-around;
+}
+
+#infosContact h3 {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+
+#infosContact ul li {
+    list-style-type: none;
+    margin: 0.7rem 0;
+}
+
+#infosContact a {
+    color: black;
+}
+
+#infosContact i {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+#infosContact i:first-of-type, #infosContact i:nth-of-type(4) {
+    margin-top: 0;
+}
+
+#socialMedia {
+    margin-top: 1rem;
+}
+
+/* section footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 10vh;
+}
+
+@media screen and (min-width:576px) {   
+    header div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logo {
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        color: black;
+        padding: 0.5rem 7.4rem;
+    }
+
+    #logo h1 {
+        margin-bottom: 6rem;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #menuToggle ~ #menu ul a {
+        height: 3.5rem;
+        padding: .5rem 0;
+        margin: 0;
+        width: 100%;
+        background-color: white;
+        color: black;
+    }
+    
+    #menuToggle:checked ~ #menu ul a {
+        width: 100%;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #menu ul {
+        margin: 2rem 0;
+    }
+
+    #menu ul li {
+        list-style-type: none;
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+
+    #search {
+        width: 71%;
+        color: black;
+        height: 3rem;
+        margin-left: 25rem;
+    }
+
+    #search div {
+        width: 5%;
+    }
+
+    #collection div, #forWrap, #subscribe, #contact {
+        width: 71%;
+        margin-left: 25rem;
+    }
+
+    #collection div {
+        height: 90vh;
+        justify-content: flex-start;
+    }
+
+    #collection h3 {
+        font-size: 5rem;
+        margin-top: 2.5rem;
+    }
+    
+    #collection p {
+        font-size: 2.5rem;
+    }
+    
+    #collection button {
+        font-size: 1.2rem;
+        padding: 1rem 3rem;
+    }
+
+    
+    #numbItems {
+        margin: 1rem 0;
+        margin-left: 25rem;
+    }
+
+    .cards { 
+        width: 22%;
+        color: black;
+    }
+     
+    #contact {
+        color: black;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #formContact {
+        width: 40%;
+    }
+
+    #about, #store {
+        margin: 0 2rem;
+    }
+
+    #store {
+        text-align: left;
+    }
+
+    .icoStore{
+        display: flex;
+        margin: 0.5rem 0;
+    }
+
+    #infosContact {
+        margin-right: 15rem;
+    }
+
+    footer {
+        height: 20vh;
+    }
+}
